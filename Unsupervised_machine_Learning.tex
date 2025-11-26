@@ -1,0 +1,33 @@
+This is an Unsupervised Learning recommendation system, specifically a Content-Based Recommendation System using cosine similarity. Here's why:
+
+1.)No Labeled Training Data:
+
+The system doesn't use any labeled data or target variables
+There's no training phase with correct answers
+No user ratings or feedback are used to train the model
+
+2.) Content-Based Approach:
+
+Uses movie features like:
+Overview
+Genres
+Keywords
+Cast
+Crew (Director)
+
+
+3.)Key Unsupervised Components:
+# Text vectorization
+vectors = cv.fit_transform(new_df['tags']).toarray()
+
+# Similarity calculation
+similarity = cosine_similarity(vectors)
+Uses CountVectorizer to convert text to vectors
+Calculates similarity between movies without any supervised labels
+Recommendations are made purely based on content similarity
+
+4.)Recommendation Logic:
+
+Movies are recommended based on similarity scores
+No learning from user preferences or historical data
+Purely based on content features similarity
